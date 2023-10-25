@@ -10,28 +10,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
+  <!-- Site header -->
   <header>
-    <!-- Site logo -->
-    <a class="logo link" href="./index.html"><span class="logo-color">Web</span>Studio</a>
-    <!-- Site nav -->
-    <nav>
-      <ul class="site-nav list">
-        <li><a class="link" href="./index.html">Студія</a></li>
-        <li><a class="link current" href="./portfolio.html">Портфоліо</a></li>
-        <li><a class="link" href="">Контакти</a></li>
+    <div class="page-header container">
+      <!-- Site logo -->
+      <a class="logo link" href="./index.html"><span class="logo-color">Web</span>Studio</a>
+      <!-- End Site logo -->
+
+      <!-- Site nav -->
+      <nav>
+        <ul class="site-nav">
+          <li class="item"><a class="link" href="./index.html">Студія</a></li>
+          <li class="item"><a class="link current" href="./portfolio.html">Портфоліо</a></li>
+          <li class="item"><a class="link" href="">Контакти</a></li>
+        </ul>
+      </nav>
+      <!-- End Site nav -->
+
+      <!-- Сontacts in header -->
+      <ul class="contacts">
+        <li class="item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li class="item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
       </ul>
-    </nav>
-    <!-- Сontact in header -->
-    <ul class="contact-list list">
-      <li><a class="link top" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-      <li><a class="link top" href="tel:+380961111111">+38 096 111 11 11</a></li>
-    </ul>
-    <!-- End contact in header -->
+      <!-- End Contacts in header -->
+    </div>
   </header>
+  <!-- End Site header -->
 
   <main>
     <!-- Property filter -->
@@ -46,7 +55,7 @@
     </div>
     <!-- End Property filter -->
 
-    <!-- Our products -->
+    <!-- Our products section -->
     <section class="products">
       <h1 class="products-title">Наші продукти</h1>
       <ul class="list">
@@ -105,23 +114,28 @@
         </li>
       </ul>
     </section>
-    <!-- End Our products -->
+    <!-- End Our products section -->
   </main>
 
   <!-- Site footer -->
-  <footer class="ftr">
-    <!-- Site logo footer -->
-    <a class="logo link" href="./index.html"><span class="logo-color">Web</span>Studio</a>
-    <!-- Сontact in footer -->
-    <address class="addr">
-      <ul class="contact-list list">
-        <li>м. Київ, пр-т Лесі Українки, 26</li>
-        <li><a class="link bottom" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a class="link bottom" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
-    </address>
-    <!-- End contact in footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <!-- Site logo footer -->
+      <a class="logo link" href="./index.html"><span class="logo-color">Web</span>Studio</a>
+      <!-- End Site logo footer -->
+
+      <!-- Сontacts in footer -->
+      <address class="addr">
+        <ul class="contact-list">
+          <li class="item">м. Київ, пр-т Лесі Українки, 26</li>
+          <li class="item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li class="item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+        </ul>
+      </address>
+      <!-- End Contacts in footer -->
+    </div>
   </footer>
+  <!-- End Site footer -->
 </body>
 
 </html>
