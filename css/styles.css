@@ -7,7 +7,23 @@
   --theme-bg-color: #2f303a;
   --black-color: #000000;
   --white-color: #ffffff;
-  --transparent-white-color: rgba(255, 255, 255, 0.60);
+  --transparent-60-white-color: rgba(255, 255, 255, 0.60);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
@@ -18,15 +34,18 @@ body {
   background-color: var(--primary-bg-color);
 }
 
-.list {
-  list-style: none;
-}
-
 .link {
   text-decoration: none;
 }
 
-.button {
+.container {
+  box-sizing: border-box;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* .button {
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -35,16 +54,24 @@ body {
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   cursor: pointer;
-}
+} */
 
-.button.primary {
+/* .button.primary {
   color: var(--white-color);
   background-color: var(--accent-color);
-}
+} */
 
 /* Стилі для index.html */
+.page-header {
+  display: flex;
+  align-items: center;
+}
+
 /* Site logo */
 .logo {
+  display: block;
+  margin-right: 93px;
+
   font-family: 'Raleway';
   font-size: 26px;
   font-weight: 700;
@@ -56,7 +83,19 @@ body {
 }
 
 /* Site nav */
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
@@ -74,11 +113,26 @@ body {
 /* End Site nav */
 
 /* Сontact in header */
-.contact-list .top.link {
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .item + .item {
+  margin-left: 50px;
+}
+
+.contacts .link {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
 /* End Сontact in header */
 
 /* Site sections */
@@ -86,20 +140,42 @@ body {
 /* Hero section */
 .hero {
   background-color: var(--theme-bg-color);
+  text-align: center;
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
-  text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
 }
+
+.hero-button {
+  padding: 10px 32px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
 /* End Hero section */
 
 .sect-title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -107,11 +183,29 @@ body {
 }
 
 /* Features section */
+.features {
+  padding-top: 94px;
+}
+
+.features .sect-title {
+  display: none;
+}
+
 .features .title {
+  margin-bottom: 10px;
+
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--title-text-color);
+}
+
+.features-list {
+  display: flex;
+}
+
+.features-list .item + .item {
+  margin-left: 30px;
 }
 
 .features .text {
@@ -119,13 +213,54 @@ body {
 }
 
 /* End Features section */
+/* Works section */
+.works {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.works-list {
+  display: flex;
+}
+
+.works-list .item + .item {
+  margin-left: 30px;
+}
+
+.works-list .image {
+  display: block; /* для того чтоб убрать отступ снизу от изображений */
+}
+/* End Works section */
 
 /* Team section */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
   background-color: var(--secondary-bg-color);
 }
 
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  padding-bottom: 30px;
+  background-color: var(--white-color);
+}
+
+.team-list .item + .item {
+  margin-left: 30px;
+}
+
+.team-list .image {
+  display: block; /* для того чтоб убрать отступ снизу от изображений */
+  margin-bottom: 30px;
+}
+
 .team .title {
+  margin-bottom: 10px;
+
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -140,14 +275,17 @@ body {
 /* End Team section */
 
 /* Site footer */
-.ftr {
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: var(--white-color);
   background-color: var(--theme-bg-color);
 }
 
 /* Site logo footer */
-.ftr .logo {
+.page-footer .logo {
   color: var(--white-color);
+  margin-bottom: 20px;
 }
 
 /* End Site logo footer */
@@ -158,14 +296,19 @@ body {
   line-height: 1.71;
 }
 
-.contact-list .bottom.link {
-  color: var(--transparent-white-color);
+.contact-list .item + .item {
+  margin-top: 9px;
+}
+
+.contact-list .link {
+  color: var(--transparent-60-white-color);
 }
 
 .contact-list .link:hover,
 .contact-list .link:focus {
   color: var(--accent-color);
 }
+
 /* End Сontact in footer */
 /* End Site footer */
 
