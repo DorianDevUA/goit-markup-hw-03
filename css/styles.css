@@ -73,8 +73,6 @@ body {
 .page-header .container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 /* Site logo header*/
@@ -104,6 +102,10 @@ body {
 }
 
 .site-nav .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
@@ -322,19 +324,6 @@ body {
 
 /* Стили portfolio.html */
 /* Property filter */
-
-/* .filter .button {
-  font-weight: 500;
-  line-height: 1.63;
-  letter-spacing: 0.03em;
-}
-
-.filter .button:hover,
-.filter .button:focus,
-.filter .button.current {
-  background-color: var(--accent-color);
-  color: var(--white-color);
-} */
 
 /* Our products section */
 .products-title {
