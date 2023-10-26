@@ -164,6 +164,7 @@ body {
 }
 
 .hero .btn {
+  box-sizing: border-box;
   padding: 10px 32px;
 
   font-size: 16px;
@@ -352,6 +353,7 @@ body {
 }
 
 .products-filter .btn {
+  box-sizing: border-box;
   padding: 6px 22px;
 
   font-size: 16px;
@@ -391,17 +393,18 @@ body {
   margin-bottom: 0;
 }
 
-.card .image {
+.card-thumb {
   display: block;
 }
 
-.product-list .caption {
+.card-content {
+  box-sizing: border-box;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
 }
 
-.product-list .title {
+.card-title {
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -411,7 +414,7 @@ body {
   color: var(--title-text-color);
 }
 
-.product-list .text {
+.card-category {
   font-size: 16px;
   line-height: 1.88;
 }
